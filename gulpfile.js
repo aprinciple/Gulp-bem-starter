@@ -1,6 +1,6 @@
 /* eslint-disable */
 
-// npm install gulp gulp-plumber gulp-csso gulp-imagemin gulp-webp gulp-svg-sprite node-sass gulp-sass gulp-postcss autoprefixer gulp-pretty-html gulp-babel babel-loader @babel/core @babel/preset-env babel-plugin-transform-runtime gulp-file-include gulp-rename del gulp-cache browser-sync webpack webpack-stream bem-tools-core bem-tools-create --save-dev
+// npm install gulp gulp-plumber gulp-csso gulp-imagemin gulp-webp gulp-svg-sprite node-sass gulp-sass gulp-postcss autoprefixer gulp-pretty-html gulp-babel babel-loader @babel/core @babel/preset-env @babel/runtime @babel/plugin-transform-runtime gulp-file-include gulp-rename del gulp-cache browser-sync webpack webpack-stream bem-tools-core bem-tools-create --save-dev
 
 const 
   gulp = require('gulp'),
@@ -75,13 +75,11 @@ function script() {
             use: {
               loader: 'babel-loader',
               options: {
-                presets: ['@babel/preset-env']
-              },
-              plugins: [
-                ['transform-runtime', {
-                  'regenerator': true
-                }]
-              ]
+                presets: ['@babel/preset-env'],
+                plugins: [
+                  ['@babel/transform-runtime']
+                ]
+              }
             }
           }
         ]
