@@ -17,9 +17,9 @@
   },
   "homepage": "https://github.com/aprinciple/Gulp-bem-starter#readme",
   "devDependencies": {
-    "@babel/core": "^7.11.1",
-    "@babel/plugin-transform-runtime": "^7.11.0",
-    "@babel/preset-env": "^7.11.0",
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-transform-runtime": "^7.11.5",
+    "@babel/preset-env": "^7.11.5",
     "autoprefixer": "^9.8.6",
     "babel-loader": "^8.1.0",
     "bem-tools-core": "0.0.3",
@@ -41,7 +41,7 @@
     "gulp-webp": "^4.0.1",
     "node-sass": "^4.14.1",
     "webpack": "^4.44.1",
-    "webpack-stream": "^5.2.1"
+    "webpack-stream": "^6.1.0"
   },
   "dependencies": {
     "@babel/runtime": "^7.11.2"
