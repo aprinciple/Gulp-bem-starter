@@ -27,6 +27,12 @@ dd {
   margin: 0;
 }
 
+/* Fixed horizontal scrolling when working animation with transform: translate */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 /* Set core root defaults */
 html {
   scroll-behavior: smooth;
@@ -45,6 +51,11 @@ ol[class] {
   list-style: none;
 }
 
+/* Delete the color of the highlight that appears over a link while it's being tapped iOS */
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
@@ -53,8 +64,9 @@ a:not([class]) {
 /* Make images easier to work with */
 img,
 picture {
-  max-width: 100%;
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 /* Natural flow and rhythm in articles by default */
@@ -68,6 +80,12 @@ button,
 textarea,
 select {
   font: inherit;
+}
+
+textarea,
+input:not([type="radio"]):not([type="checkbox"]) {
+  -webkit-appearance: none;
+  border-radius: 0;
 }
 
 /* Blur images when they have no alt attribute */
