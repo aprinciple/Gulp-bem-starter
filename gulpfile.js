@@ -64,6 +64,7 @@ function script() {
   return src('src/js/*.js')
     .pipe(plumber())
     .pipe(webpackStream({
+      mode: "production",
       output: {
         filename: 'script.min.js',
       },
@@ -94,8 +95,8 @@ function images() {
     [
     'src/img/*.{jpg,jpeg,png,gif,svg}',
     '!src/img/favicon/*',
-    'src/blocks/modules/common/*/img/*.{jpg,jpeg,png,gif,svg}',
-    'src/blocks/modules/pages/*/*/img/*.{jpg,jpeg,png,gif,svg}'
+    'src/blocks/modules/common/**/img/*.{jpg,jpeg,png,gif,svg}',
+    'src/blocks/modules/pages/**/img/*.{jpg,jpeg,png,gif,svg}',
     ])
   .pipe(imagemin([
     imagemin.optipng(),
