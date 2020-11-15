@@ -5,12 +5,6 @@
   box-sizing: border-box;
 }
 
-/* Remove default padding */
-ul[class],
-ol[class] {
-  padding: 0;
-}
-
 /* Remove default margin */
 body,
 h1,
@@ -86,11 +80,6 @@ textarea,
 input:not([type="radio"]):not([type="checkbox"]) {
   -webkit-appearance: none;
   border-radius: 0;
-}
-
-/* Blur images when they have no alt attribute */
-img:not([alt]) {
-  filter: blur(10px);
 }
 
 /* Remove all animations and transitions for people that prefer not to see them */
