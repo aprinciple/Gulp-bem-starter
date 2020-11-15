@@ -101,7 +101,7 @@ function images() {
   .pipe(imagemin([
     imagemin.optipng(),
     imagemin.mozjpeg({
-      quality: 85, 
+      quality: 80, 
       progressive: true
     }),
     imagemin.gifsicle({interlaced: true}),
