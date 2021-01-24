@@ -47,6 +47,11 @@ a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
+figure, figcaption {
+  margin: 0;
+  padding: 0;
+}
+
 /* Make images easier to work with */
 img,
 picture {
@@ -67,6 +72,14 @@ textarea,
 input:not([type="radio"]):not([type="checkbox"]) {
   -webkit-appearance: none;
   border-radius: 0;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 /* Remove all animations and transitions for people that prefer not to see them */
