@@ -1,6 +1,6 @@
 /* eslint-disable */
 
-// npm install gulp gulp-plumber gulp-csso gulp-imagemin gulp-webp gulp-svg-sprite node-sass gulp-sass postcss gulp-postcss autoprefixer gulp-pretty-html gulp-babel babel-loader @babel/core @babel/preset-env @babel/runtime @babel/plugin-transform-runtime gulp-file-include gulp-rename del gulp-cache browser-sync webpack webpack-stream bem-tools-core bem-tools-create --save-dev
+// npm install gulp gulp-plumber gulp-csso gulp-imagemin gulp-webp gulp-svg-sprite sass gulp-sass postcss gulp-postcss autoprefixer gulp-pretty-html gulp-babel babel-loader @babel/core @babel/preset-env @babel/runtime @babel/plugin-transform-runtime gulp-file-include gulp-rename del gulp-cache browser-sync webpack webpack-stream bem-tools-core bem-tools-create --save-dev
 
 const 
   gulp = require('gulp'),
@@ -10,7 +10,7 @@ const
   imagemin = require('gulp-imagemin'),
   webp = require('gulp-webp'),
   svgSprite = require('gulp-svg-sprite'),
-  sass = require('gulp-sass'),
+  sass = require('gulp-sass')(require('sass')),
   postcss = require('gulp-postcss'),
   autoprefixer = require('autoprefixer'),
   prettyHtml = require('gulp-pretty-html'),
